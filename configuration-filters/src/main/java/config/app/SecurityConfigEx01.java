@@ -26,6 +26,17 @@ public class SecurityConfigEx01 {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        return http.build();
+//        http
+//        	.formLogin(new Customizer<FormLoginConfigurer<HttpSecurity>>() {
+//				@Override
+//				public void customize(FormLoginConfigurer<HttpSecurity> formLoginConfigurer) {
+//				}
+//        	});
+    	
+      http
+    		.formLogin(formLogin -> {
+    		});
+    	
+    	return http.build();
     }
 }
